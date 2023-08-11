@@ -61,7 +61,7 @@ const handleSubmit = async(event) => {
     document.querySelector("#irony").innerHTML = "Irony: " + irony ;
     document.querySelector("#score_tag").innerHTML = "Score Tag:" + score_tag;
 
-
+    return true
 }
 
 
