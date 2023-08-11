@@ -14,7 +14,7 @@ const key = process.env.API_KEY;
 
 // Read the JSON files coming to you
 app.use(express.json());
-app.use(express.static('../../dist/'));
+app.use(express.static(__dirname + "/build/"));
 
 app.get("/", (req, res) => {
     res.sendFile( __dirname + "/build/index.html");
