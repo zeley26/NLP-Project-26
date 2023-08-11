@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static('../../dist/'));
 
 app.get("/", (req, res) => {
-    res.sendFile( __dirname + "../../dist/index.html");
+    res.sendFile( __dirname + "/build/index.html");
 });
 
 app.post("/", async(req, res) => {
