@@ -1,0 +1,6 @@
+@import "variables";
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-small $spacing-large;
+}

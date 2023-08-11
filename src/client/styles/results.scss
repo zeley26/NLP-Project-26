@@ -1,0 +1,31 @@
+@import "variables";
+#error {
+    color: red;
+    text-align: center;
+    margin-top: $spacing-medium;
+}
+
+#results {
+    margin-top: $spacing-large;
+    padding: $spacing-medium;
+    border: 1px solid $gray-color;
+    border-radius: 5px;
+    background-color: rgba($gray-color, 0.1);
+    h2 {
+        border-bottom: 1px solid $gray-color;
+        padding-bottom: $spacing-small;
+    }
+    #resultsList {
+        list-style-type: none;
+        padding: 0;
+        li {
+            padding: $spacing-small 0;
+            font-weight: bold;
+        }
+    }
+}
+
+#loader {
+    text-align: center;
+    padding: $spacing-medium 0;
+}

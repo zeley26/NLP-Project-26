@@ -1,0 +1,39 @@
+@import "variables";
+body {
+    font-family: $font-primary;
+    margin: 0;
+    padding: 0;
+    background-color: $white-color;
+    color: $primary-color;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #aff1c7;
+    // The styles below ensure the background covers the entire viewport
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 $spacing-small;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+}

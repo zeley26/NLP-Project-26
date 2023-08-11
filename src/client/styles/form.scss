@@ -1,0 +1,25 @@
+@import "variables";
+form {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+    input {
+        padding: 5px $spacing-medium;
+        width: 100%;
+        line-height: 16px;
+        margin: $spacing-small 0;
+    }
+}
+
+button,
+.btn {
+    padding: $spacing-small $spacing-medium;
+    border: none;
+    border-radius: 3px;
+    background-color: $primary-color;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
