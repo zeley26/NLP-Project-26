@@ -7,7 +7,7 @@ const { analyze } = require("./analyze.js");
 // Using CORS cross-origin
 app.use(cors());
 
-dotenv.config();
+//dotenv.config();
 
 const port = 8000;
 const key = process.env.API_KEY;
