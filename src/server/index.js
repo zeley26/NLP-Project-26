@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 const cors = require("cors");
-const dotenv = require("dotenv")
+//const dotenv = require("dotenv")
 const { analyze } = require("./analyze.js");
 
 // Using CORS cross-origin
