@@ -5,8 +5,7 @@ const meaningCloud = 'https://api.meaningcloud.com/sentiment-2.1';
 const analyze = async(url, key) => {
 
 
-    const data = await axios.get(`${meaningCloud}?key=${key}&url=${url}&lang=en`);
- ;
+    const data = await axios.get(`${meaningCloud}?key=${key}&url=${url}&lang=en`);;
 
     /*
         .then(data => {
@@ -16,12 +15,12 @@ const analyze = async(url, key) => {
             return data.data.sentence_list;
         });
 */
-    console.log("other:" , data.data.subjectivity);
+    console.log("other:", data.data);
 
     return {
         subjectivity: data.data.subjectivity,
         irony: data.data.irony,
-        sentence_list:  data.data.sentence_list
+        sentence_list: data.data.sentence_list
     }
 };
 

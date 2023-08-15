@@ -23,14 +23,26 @@
             <div id="loader" style="display: none;"></div>
 
             <ul id="resultsList">
-                <li id="agreement"></li>
+                <!-- <li id="agreement"></li> -->
                 <li id="subjectivity"></li>
-                <li id="confidence"></li>
-                <li id="irony"></li>
-                <li id="score_tag"></li>
+                <!-- <li id="confidence"></li> -->
+                <!-- <li id="irony"></li>
+                <li id="score_tag"></li> -->
+                <li id="text"></li>
+                <li id="polarity"></li>
             </ul>
         </div>
     </div>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

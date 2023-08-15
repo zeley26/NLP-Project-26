@@ -23,7 +23,7 @@ var input = document.querySelector("form input");
 var form = document.querySelector("form");
 var handleSubmit = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
-    var formInput, expression, regex, response, _response$data$senten, agreement, confidence, score_tag, irony, subjectivity;
+    var formInput, expression, regex, response, _response$data$senten, agreement, confidence, score_tag, text, subjectivity;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -56,16 +56,16 @@ var handleSubmit = /*#__PURE__*/function () {
           });
         case 16:
           response = _context.sent;
-          console.log("return data", response.data);
-          _response$data$senten = response.data.sentence_list[0], agreement = _response$data$senten.agreement, confidence = _response$data$senten.confidence, score_tag = _response$data$senten.score_tag;
-          irony = response.data.irony;
-          subjectivity = response.data.subjectivity;
-          document.querySelector("#agreement").innerHTML = "Agreeement: " + agreement;
+          console.log("return data", response);
+          _response$data$senten = response.data.sentence_list[0], agreement = _response$data$senten.agreement, confidence = _response$data$senten.confidence, score_tag = _response$data$senten.score_tag, text = _response$data$senten.text; //const irony = response.data.irony;
+          subjectivity = response.data.subjectivity; //document.querySelector("#agreement").innerHTML = "Agreeement: " + agreement;
           document.querySelector("#subjectivity").innerHTML = "Subjectivty: " + subjectivity;
-          document.querySelector("#confidence").innerHTML = "Confidence: " + confidence;
-          document.querySelector("#irony").innerHTML = "Irony: " + irony;
-          document.querySelector("#score_tag").innerHTML = "Score Tag:" + score_tag;
-        case 26:
+          //document.querySelector("#confidence").innerHTML = "Confidence: " + confidence;
+          //document.querySelector("#irony").innerHTML = "Irony: " + irony;
+          //document.querySelector("#score_tag").innerHTML = "Score Tag:" + score_tag;
+          document.querySelector("#text").innerHTML = "Text:" + score_tag;
+          return _context.abrupt("return", true);
+        case 23:
         case "end":
           return _context.stop();
       }
