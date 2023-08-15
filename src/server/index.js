@@ -1,16 +1,27 @@
 const express = require("express")
 const app = express();
 const cors = require("cors");
-const dotenv = require("dotenv")
+
+if (!ENV['API_KEY']) {
+    const dotenv = require("dotenv")
+}
+
 const { analyze } = require("./analyze.js");
 
 // Using CORS cross-origin
 app.use(cors());
 
-dotenv.config();
+if (!ENV['API_KEY']) {
+    dotenv.config();
+}
 
 const port = 8000;
-const key = process.env.API_KEY;
+let key = '';
+if (!ENV['API_KEY']) {
+    key = process.env.API_KEY;
+} else {
+    key = !ENV['API_KEY'];
+}
 
 // Read the JSON files coming to you
 app.use(express.json());
